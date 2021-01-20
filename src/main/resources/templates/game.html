@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>CMPT 213 Online Hangman Game</title>
+    <link th:href="@{/styles/main.css}" rel="stylesheet" />
+</head>
+<body>
+    <div class="header">
+        <img th:src="@{/images/hang.svg}" />
+        <h2>CMPT 213 Online Hangman</h2>
+    </div>
+
+    <div class="page-content">
+        <h1 class="game">Game <span th:text="${game.id}"></span></h1>
+        <hr>
+
+        <table>
+            <tr>
+                <td class="stats">
+                    <p><strong>Status: </strong></p>
+                </td>
+                <td class="data">
+                    <span th:text="${game.status}"></span>
+                </td>
+                <td rowspan="3" th:switch="${game.incorrectGuesses}">
+                    <img th:case="'0'" th:src="@{/images/hangman7.svg}" />
+                    <img th:case="'1'" th:src="@{/images/hangman6.svg}" />
+                    <img th:case="'2'" th:src="@{/images/hangman5.svg}" />
+                    <img th:case="'3'" th:src="@{/images/hangman4.svg}" />
+                    <img th:case="'4'" th:src="@{/images/hangman3.svg}" />
+                    <img th:case="'5'" th:src="@{/images/hangman2.svg}" />
+                    <img th:case="'6'" th:src="@{/images/hangman1.svg}" />
+                    <img th:case="'7'" th:src="@{/images/hangman0.svg}" />
+                    <img th:case="'*'" th:src="@{/images/hangmanDead.svg}" />
+                </td>
+                <td rowspan="3" class="guessAndWord border-left">
+                    <div class="progress">
+                        <strong>Progress</strong>
+                        <p><strong><span th:text="${game.progress}" class="word"></span></strong></p>
+                    </div>
+
+                    <br/>
+                    <!--get guess-->
+                    <form action="#" th:action="@{/game}" th:object="${newGuess}" method="post">
+                        <div>
+                            <strong>Guess</strong>
+                            <br/>
+                            <p>
+                                <input title="One letter lower-case guess" pattern="[a-z]{1}" type="text" value="" th:field="*{guess}"/>
+                                <button type="submit">Make a Guess!</button>
+                            </p>
+                        </div>
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                <td class="stats">
+                    <p><strong>Total Guesses: </strong></p>
+                </td>
+                <td class="data">
+                    <span th:text="${game.totalGuesses}"></span>
+                </td>
+            </tr>
+            <tr>
+                <td class="stats">
+                    <p><strong>Incorrect Guesses Left: </strong></p>
+                </td>
+                <td class="data">
+                    <span th:text="${game.incorrectGuesses}"></span>
+                </td>
+            </tr>
+        </table>
+
+        <p><a th:href="@{/welcome}">Back to Welcome page</a></p>
+    </div>
+
+    <div class="footer">
+        <p>Glory Quan, 301390405, gloryq@sfu.ca</p>
+    </div>
+</body>
+</html>

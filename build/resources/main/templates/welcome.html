@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>CMPT 213 Online Hangman Game</title>
+    <link th:href="@{/styles/main.css}" rel="stylesheet" />
+</head>
+<body>
+    <div class="header">
+        <img th:src="@{/images/hang.svg}" />
+        <h2>CMPT 213 Online Hangman</h2>
+    </div>
+
+
+    <div class="page-content">
+        <h1 class="title">Welcome to The Hangman Game!</h1>
+        <h3>Rules of the game:</h3>
+        <ul>
+            <li>Click on the Start New Game button to start a new game</li>
+            <li>A new word is selected when you do</li>
+            <li>You can guess a correct letter multiple times,
+                but it will be added to the number of guesses</li>
+            <li>Each time an incorrect letter is guessed, it will be
+                counted toward the number of incorrect guesses,
+                regardless of whether this letter has been guessed before.</li>
+            <li>Empty guesses are not counted toward any guesses.</li>
+            <li>You are allowed up to 7 incorrect guesses.</li>
+            <li>Only 1 letter guesses will be valid.</li>
+            <li>Enjoy my computer-hand drawn hangman images.</li>
+        </ul>
+
+        <form th:action="@{/game}" th:object="${newGame}" method="post">
+            <button type="submit">Start New Game</button>
+        </form>
+    </div>
+
+    <div class="footer">
+        <p>Glory Quan, 301390405, gloryq@sfu.ca</p>
+    </div>
+</body>
+</html>

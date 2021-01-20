@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>CMPT 213 Online Hangman Game</title>
+    <link th:href="@{/styles/main.css}" rel="stylesheet" />
+</head>
+<body>
+    <div class="header">
+        <img th:src="@{/images/hang.svg}" />
+        <h2>CMPT 213 Online Hangman</h2>
+    </div>
+
+    <div class="page-content">
+        <h1 class="title">Game Not Found</h1>
+
+        <img class="center" th:src="@{/images/hangmanNotFound.svg}" />
+        <p align="middle"><strong>Looks like that game session does not exist at the moment. Sorry.</strong></p>
+
+        <br/>
+        <p><a th:href="@{/welcome}">Back to Welcome page</a></p>
+
+    </div>
+
+    <div class="footer">
+        <p>Glory Quan, 301390405, gloryq@sfu.ca</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,148 @@
+html {
+    font-family:        sans-serif;
+    background-color:   #FCF8ED;
+    height:             100%;
+    margin:             0;
+}
+
+body {
+    height:             100%;
+    margin:             0;
+    background-color:   #FCF8ED;
+}
+
+button {
+    font-family:        sans-serif;
+    font-size:          15px;
+    border-radius:      5px;
+    border:             none;
+    padding:            5px 15px 5px 15px;
+    margin-left:        22px;
+    height:             35px;
+    background:         #8C4843;
+    color:              #FCF8ED;
+    transition-duration:0.2s;
+}
+
+button:hover {
+    cursor:             pointer;
+    background:         #746D75;
+}
+
+a:link {
+    color:              #8C4843;
+}
+
+a:visited {
+    color:              #8C4843;
+}
+
+a:hover {
+    color:              #746D75;
+}
+
+hr {
+    width:              200px;
+    height:             2px;
+    margin-bottom:      20px;
+    border-radius:      2px;
+    border-color:       #8C4843;
+    background:         #8C4843;
+}
+
+input {
+    height:             30px;
+    border-color:       #8C4843;
+    background:         #FCF8ED;
+}
+
+table {
+    margin-left:        auto;
+    margin-right:       auto;
+}
+
+td {
+    padding-left:       5px;
+    padding-right:      5px;
+}
+
+.title {
+    text-align:         center;
+}
+
+.game {
+    text-align:         center;
+    margin-bottom:      0;
+}
+
+.stats {
+    text-align:         right;
+}
+
+.guessAndWord {
+    padding-left:        50px;
+    text-align:          center;
+}
+
+.progressBox  {
+    border:             2px solid;
+    border-color:       #8C4843;
+    text-align:         center;
+}
+
+.data {
+    text-align:         center;
+}
+
+.border-left {
+    border-left:        3px solid;
+    border-color:       #8C4843;
+}
+
+.header {
+    background-color:   #746D75;
+    color:              #FCF8ED;
+    height:             100px;
+    width:              100%;
+    margin-top:         0;
+    margin-bottom:      0;
+    padding-left:       15%;
+}
+
+.header img {
+    float:              left;
+}
+
+.header h2 {
+    float:              left;
+    margin-top:         5px;
+    margin-left:        -60px;
+    font-size:          38px;
+    line-height:        100px;
+}
+
+.page-content {
+    color:              #000045;
+    margin-top:         0;
+    margin-left:        15%;
+    margin-right:       15%;
+    padding-top:        30px;
+    min-height:         100vh;
+}
+
+.center {
+    margin-left:        auto;
+    margin-right:        auto;
+    display:            block;
+}
+
+.footer {
+    background-color:   #746D75;
+    color:              #FCF8ED;
+    height:             100px;
+    width:              100%;
+    left:               0;
+    bottom:             0;
+    padding-top:        10px;
+    padding-left:       15%;
+}

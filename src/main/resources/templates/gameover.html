@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>CMPT 213 Online Hangman Game</title>
+    <link th:href="@{/styles/main.css}" rel="stylesheet" />
+</head>
+<body>
+    <div class="header">
+        <img th:src="@{/images/hang.svg}" />
+        <h2>CMPT 213 Online Hangman</h2>
+    </div>
+
+    <div class="page-content">
+        <h1 class="title">Game <span th:text="${game.id}"></span> is Over</h1>
+
+        <table>
+            <tr colspan="2">
+                <td th:switch="${game.status}">
+                    <img th:case="'Lost'" th:src="@{/images/hangmanDead.svg}" />
+                    <img th:case="'Won'" th:src="@{/images/hangmanAlive.svg}" />
+                    <img th:case="'*'" th:src="@{/images/hangmanNotFound.svg}" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p><strong>
+                        Status:
+                        <span th:text="${game.status}"></span>
+                    </strong></p>
+                </td>
+                <td class="border-left">
+                    <p><strong>
+                        Word:
+                        <span th:text="${game.word}"></span>
+                    </strong></p>
+                </td>
+            </tr>
+        </table>
+
+        <br/>
+        <p><a th:href="@{/welcome}">Back to Welcome page</a></p>
+    </div>
+
+    <div class="footer">
+        <p>Glory Quan, 301390405, gloryq@sfu.ca</p>
+    </div>
+</body>
+</html>
